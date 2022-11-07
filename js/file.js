@@ -53,27 +53,45 @@ $(document).ready(function () {
     $(".overlay").hide();
     $(".aboutCompany").get(0).play();
   });
-  $(".submitform").on("click", function () {
-
+  $(".submitform").on("click", function (e) {
+    e.preventDefault();
     var name = $("#name").val();
     var number = $("#number").val();
     var email = $("#email").val();
     var subject = $("#subject").val();
     if (email == '' || subject == '') {
       $("#errorform").html("Email and Subject Field required");
+      const myTimeout = setTimeout(myGreeting, 5000);
+
+      function myGreeting() {
+        $("#errorform").html(" ");
+      }
+
+      function myStopFunction() {
+        clearTimeout(myTimeout);
+      }
     } else {
       Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "abdulnafa1122@gmail.com",
-        Password: "A4513253055E04025CCBA6B3A383EB4BF5CC",
-        To: 'abdulnafa1122@gmail.com',
-        From: email,
-        Subject: name,
-        Body: `<h1>${name}</h1><p>subject</p>`,
+        SecureToken: "3d85d2b2-c7c4-4b28-9f28-81f5755d91c0",
+        To: 'developerabdulnafa@gmail.com',
+        From: 'abdulnafa1122@gmail.com',
+        Subject: "Portfolio Mails",
+        Body: `Name: ${name} <br/> Number: ${number} <br/> Email: ${email} <br/> Subject: ${subject} `,
       }).then(
-        $("#successform").html("Form Submitted Succssfully"),
+        myfunction()
+
 
       );
+
+      function myfunction() {
+        $("#successform").html("Form Successfully Submited");
+        setTimeout(myGreeting2, 3000);
+
+        function myGreeting2() {
+          $("#successform").html(" ");
+        }
+        $('#contactus').trigger("reset");
+      }
     }
 
 

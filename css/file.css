@@ -434,11 +434,16 @@ a{
 }
 
 .projectParts .part4{
-    background-image: url(../images/menhand.jpg);
+    background-image: url(../images/part4.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.projectParts .part5{
+    background-image: url(../images/part5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 
