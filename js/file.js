@@ -23,7 +23,10 @@ $(document).ready(function () {
         items: 1
       },
       600: {
-        items: 3
+        items: 1
+      },
+      800: {
+        items: 2
       },
       1000: {
         items: 3
@@ -85,7 +88,8 @@ $(document).ready(function () {
 
       function myfunction() {
         $("#successform").html("Form Successfully Submited");
-        setTimeout(myGreeting2, 3000);
+        swal("Form Successfully Submited!", "I'll be contact soon!", "success");
+        setTimeout(myGreeting2, 7000);
 
         function myGreeting2() {
           $("#successform").html(" ");
@@ -104,7 +108,7 @@ $(document).ready(function () {
       $('.content', this).hide(500);
     });
 
-  // Load More Project  Code 
+  // Load More Project  Code ------------------
 
   $(function () {
 
@@ -142,6 +146,22 @@ $(document).ready(function () {
     });
 
   });
+  // Load More Project code End -------------------------
 
+  $(".openmenu").on("click", function () {
+    $(".mobilemenusmall").slideDown();
+    $("body").css("overflow-y", "hidden");
+
+  });
+
+  $(".mobilemenusmall ul li").on("click", function () {
+    $(".mobilemenusmall").hide();
+    $("body").css("overflow-y", "scroll");
+
+  });
+  $(".cross").on("click", function () {
+    $(".mobilemenusmall").slideUp();
+    $("body").css("overflow-y", "scroll");
+  });
 
 });
