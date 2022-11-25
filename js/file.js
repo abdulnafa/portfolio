@@ -164,4 +164,18 @@ $(document).ready(function () {
     $("body").css("overflow-y", "scroll");
   });
 
+
+
+  // Typing Text 
+
+  var typed = new Typed(".animatedtext", {
+    strings: ["Creative<br/>Work Idea",
+    "Creative"],
+      
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true,
+});
+
+
 });

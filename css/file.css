@@ -118,6 +118,10 @@ a{
     
 }
 
+.animatedtext{
+    height: 100px;
+}
+
 /* Filter section  */
 
 .heroSection .filter{
