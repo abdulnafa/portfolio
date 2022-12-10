@@ -1326,29 +1326,29 @@ color: white;
     }
     
     .projectParts .part1{
-        background-image: url(../images/part1.png);
+        background-image: url(../images/part1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
     .projectParts .part2{
-        background-image: url(../images/part2.png);
+        background-image: url(../images/part2.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
     .projectParts .part3{
-        background-image: url(../images/part3.png);
+        background-image: url(../images/part3.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
     
     .projectParts .part4{
-        background-image: url(../images/part4.png);
+        background-image: url(../images/part4.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
     
     .projectParts .part5{
-        background-image: url(../images/part5.png);
+        background-image: url(../images/part5.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
