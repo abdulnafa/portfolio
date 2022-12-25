@@ -167,6 +167,7 @@ $(document).ready(function () {
 
 
   // Typing Text 
+ 
 
   var typed = new Typed(".animatedtext", {
     strings: ["Creative<br/>Work Idea",
