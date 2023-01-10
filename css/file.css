@@ -503,6 +503,11 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.projectParts .part8{
+    background-image: url(../images/renovation.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .projectParts .part .content{
     width: 100%;
     padding: 50px 30px;
