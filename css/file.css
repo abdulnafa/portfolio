@@ -508,6 +508,12 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.projectParts .part9{
+    background-image: url(../images/binazam.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .projectParts .part .content{
     width: 100%;
     padding: 50px 30px;
