@@ -514,6 +514,18 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.projectParts .onezproduct{
+    background-image: url(../images/onezproduct.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.projectParts .comfatra{
+    background-image: url(../images/comfatra.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .projectParts .part .content{
     width: 100%;
     padding: 50px 30px;
