@@ -514,6 +514,18 @@ a{
     background-size: cover;
 }
 
+.projectParts .westernacademy{
+    background-image: url(../images/westernacademy.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.projectParts .greatestbaker{
+    background-image: url(../images/greatestbaker.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .projectParts .part .content{
     width: 100%;
     padding: 50px 30px;
