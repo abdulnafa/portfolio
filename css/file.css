@@ -526,6 +526,12 @@ a{
     background-size: cover;
 }
 
+.projectParts .amari{
+    background-image: url(../images/amri.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .projectParts .part .content{
     width: 100%;
     padding: 50px 30px;

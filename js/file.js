@@ -56,6 +56,9 @@ $(document).ready(function () {
     $(".overlay").hide();
     $(".aboutCompany").get(0).play();
   });
+
+
+  
   $(".submitform").on("click", function (e) {
     e.preventDefault();
     var name = $("#name").val();
