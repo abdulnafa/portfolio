@@ -97,6 +97,10 @@ a{
     display: inline-block;
     padding: 0 16px;
 }
+.header ul li a.active,
+.header ul li a:hover{
+    opacity: .75;
+}
 .header ul li.search a{
     color: white;
     margin-left: 20px;
@@ -210,6 +214,81 @@ a{
 }
 .heroSection .textSection ul li.black{
     background-color: black;
+}
+
+/* Inner page hero */
+
+.subHero{
+    background-image: linear-gradient(rgba(0, 0, 0, .72), rgba(0, 0, 0, .72)), url("../images/web-agency.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    min-height: 330px;
+    padding: 135px 15% 80px;
+}
+.subHero h1{
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 14px;
+}
+.subHero p{
+    max-width: 650px;
+    font-size: 15px;
+    line-height: 28px;
+}
+.pageLinkButton{
+    background: black;
+    color: white;
+    display: table;
+    margin: 0 auto;
+    padding: 12px 32px;
+    font-size: 13px;
+}
+.pageLinkButton:hover{
+    color: white;
+}
+.pageLinkButton.alignLeft{
+    margin: 25px 0 0;
+}
+.aboutPage{
+    width: 70%;
+    margin: auto;
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: 52% 48%;
+    gap: 40px;
+    align-items: center;
+}
+.aboutText hr{
+    width: 70px;
+    height: 5px;
+    background: black;
+    border: none;
+    margin: 10px 0 25px;
+}
+.aboutText p{
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.aboutImage{
+    min-height: 360px;
+    background-image: url("../images/menhand.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.servicesPage .serviceGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.servicesPage .serviceGrid .part{
+    max-height: none;
+}
+.featuredProjects{
+    margin-bottom: 25px;
 }
 
 /* Service  */
@@ -338,104 +417,6 @@ a{
     background-color: white; 
     color: black;
     box-shadow: 0 4px 5px 0 rgb(175 164 164 / 10%), 0 6px 10px 0 rgb(175 164 164 / 10%);
-}
-
-/* AboutCompany  */
-
-.aboutcompanymaindiv{
-    position: relative;
-}
-.aboutcompanymaindiv video{
-    border-top: 2px solid #00000073;
-    border-bottom: 2px solid #00000073;
-}
-.aboutCompany{
- 
-    right: 0;
-    bottom: 0;
-    width: 100%; 
-    height: auto;
-    
-
-}
-.aboutcompanymaindiv .overlay{
-    background-color: #000000a1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 50px 80px;
-    align-items: center;
-    color: white;
-    /* padding-left:100px; */
-    justify-content: center;
-    }
-
-
-
-.aboutCompany .overlay hr{
-    
-    width: 50px;
-    height: 5px;
-    margin:0 auto;
-    background: white;
-    border: none;
-    margin-top: 5px;
-}
-
-.aboutCompany .overlay p{
-    margin: 15px 0px;
-    font-size: 13px;
-    color: black;
-}
-
-/* Play button  */
-
-.firstPlay{
-    background-color: #ffffff4f;
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.secondPlay{
-    background-color: #ffffff33;
-    width: 100px;
-    height:100px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.thirdPlay{
-    background-color: white;
-    width: 60px;
-    height:60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.thirdPlay i{
-    font-size: 23px;
-    color: black;
-    text-align: center;
-    margin-left: 5px;
-}
-.thirdPlay img{
-    width: 20px;
-    height: 22px;
 }
 
 /* projects  */

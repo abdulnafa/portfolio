@@ -13,52 +13,49 @@ $(document).ready(function () {
 
   // Owl Carousel  Skills
 
-  $('.serviceParts.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    dots: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 1
-      },
-      800: {
-        items: 2
-      },
-      1000: {
-        items: 3
+  if ($('.serviceParts.owl-carousel').length) {
+    $('.serviceParts.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        800: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
       }
-    }
-  });
+    });
+  }
 
   // Owl Carousel Form Section 
-  $('.formsection.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 1
-      },
-      1000: {
-        items: 1
+  if ($('.formsection.owl-carousel').length) {
+    $('.formsection.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
       }
-    }
-  })
+    })
+  }
 
-  $(".playbtn").on("click", function () {
-    $(".overlay").hide();
-    $(".aboutCompany").get(0).play();
-  });
-
-
-  
   $(".submitform").on("click", function (e) {
     e.preventDefault();
     var name = $("#name").val();
@@ -114,6 +111,9 @@ $(document).ready(function () {
   // Load More Project  Code ------------------
 
   $(function () {
+    if (!$('.items').length) {
+      return;
+    }
 
     // items to show
     var increment = 4;
@@ -172,14 +172,16 @@ $(document).ready(function () {
   // Typing Text 
  
 
-  var typed = new Typed(".animatedtext", {
-    strings: ["Creative<br/>Work Idea",
-    "Creative"],
-      
-    typeSpeed: 50,
-    backSpeed: 50,
-    loop: true,
-});
+  if ($(".animatedtext").length && typeof Typed !== "undefined") {
+    var typed = new Typed(".animatedtext", {
+      strings: ["Creative<br/>Work Idea",
+      "Creative"],
+        
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    });
+  }
 
 
 });

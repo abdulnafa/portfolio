@@ -15,7 +15,8 @@ Use this file to record planned changes before editing the site.
 
 ## Known Follow-Up Items
 
-- Review malformed navigation anchor markup in `index.html` where `Home` links contain `</a< /li>`.
+- Review all pages in a browser after the folder restructure.
+- Header and footer are now shared through `_includes/header.html` and `_includes/footer.html`.
 - Consider replacing the placeholder Font Awesome kit URL with a real kit or remove it because Font Awesome is already loaded through CDN CSS.
 - Review SMTPJS usage because the secure token and sender address are currently present in frontend code.
 - Review text encoding issues in some portfolio/testimonial copy where special characters appear incorrectly.
@@ -24,4 +25,3 @@ Use this file to record planned changes before editing the site.
 ## Verification Notes
 
 - Not yet run in browser after docs creation.
-

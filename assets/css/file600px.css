@@ -139,6 +139,26 @@
     .heroSection .textSection ul li.black{
         background-color: black;
     }
+    .subHero {
+        min-height: 280px;
+        padding: 120px 36px 55px;
+    }
+    .subHero h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .subHero p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .aboutPage {
+        width: 100%;
+        padding: 60px 36px;
+        grid-template-columns: 100%;
+    }
+    .aboutImage {
+        min-height: 260px;
+    }
     
     /* Service  */
     
@@ -179,6 +199,12 @@
         min-height: 390px;
         max-height: 500px;
         overflow-y: hidden;
+    }
+    .servicesPage .serviceGrid {
+        grid-template-columns: 100%;
+    }
+    .servicesPage .serviceGrid .part {
+        max-height: none;
     }
     
     .serviceParts .darkBorder{
@@ -256,82 +282,6 @@
         background-color: white; 
         color: black;
         box-shadow: 0 4px 5px 0 rgb(175 164 164 / 10%), 0 6px 10px 0 rgb(175 164 164 / 10%);
-    }
-    
-    /* AboutCompany  */
-    
-    .aboutcompanymaindiv{
-        position: relative;
-    }
-    .aboutcompanymaindiv video{
-        border-top: 2px solid #00000073;
-        border-bottom: 2px solid #00000073;
-    }
-    .aboutCompany{
-     
-        right: 0;
-        bottom: 0;
-        width: 100%; 
-        height: auto;
-        
-    
-    }
-    .aboutcompanymaindiv .overlay{
-
-        padding: 20px 80px;
-        justify-content: flex-start;
-        }
-    
-    
-    
-    .aboutCompany .overlay hr{
-        
-        width: 50px;
-        height: 5px;
-        margin:0 auto;
-        background: white;
-        border: none;
-        margin-top: 5px;
-    }
-    
-    .aboutCompany .overlay p{
-        margin: 15px 0px;
-        font-size: 13px;
-        color: black;
-    }
-    
-    /* Play button  */
-    
-    .firstPlay{
-        width: 60px;
-        height: 60px;
-        margin-top: 10px;
-    }
-    
-    .secondPlay{
- 
-        width: 50px;
-        height: 50px;
-    }
-    
-    .thirdPlay{
-        background-color: white;
-        width: 40px;
-        height:40px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .thirdPlay i{
-        font-size: 15px;
-        color: black;
-        text-align: center;
-        margin-left: 5px;
-    }
-    .thirdPlay img{
-        width: 20px;
-        height: 22px;
     }
     
     /* projects  */

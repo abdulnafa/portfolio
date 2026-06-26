@@ -1,0 +1,57 @@
+---
+title: Abdul Nafa | Contact
+active: contact
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/file.css">
+    <link rel="stylesheet" media="screen and (max-width: 912px)" href="../assets/css/file912px.css" />
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../assets/css/file768px.css" />
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../assets/css/file600px.css" />
+    <link rel="stylesheet" media="screen and (max-width: 460px)" href="../assets/css/file460px.css" />
+</head>
+
+<body>
+    {% include header.html %}
+
+    <div class="subHero"><h1>Contact Us</h1><p>Send your project details, website update request, or business inquiry.</p></div>
+
+    <form class="formSection" id="contactus">
+        <div class="getTouch">
+            <h1>Get In Touch</h1>
+            <hr>
+            <input type="text" placeholder="Name" name="name" id="name">
+            <input type="number" placeholder="Phone Number" id="number">
+            <input type="email" placeholder="Email" id="email">
+            <textarea rows="7" id="subject" placeholder="Message"></textarea>
+            <span id="errorform"></span><br />
+            <span id="successform"></span><br />
+            <button class="submitform">SEND NOW</button>
+        </div>
+        <div class="clients">
+            <h1>What Says Clients</h1>
+            <div class="formsection owl-carousel owl-theme">
+                <div class="item"><div class="profileSection"><img src="../assets/images/review_default_pic.png" alt="Client profile"><span>mr_diamondgold</span><p>Recensione 5 stelle per abdul_nafaaay, che mi ha creato il sito WordPress. Ha fornito un servizio di alta qualita, creando un sito personalizzato che risponde alle esigenze del mio business.</p><i class="fa-solid fa-quote-left"></i></div></div>
+                <div class="item"><div class="profileSection"><img src="../assets/images/review_default_pic.png" alt="Client profile"><span>tanialynne184</span><p>WOW! Abdul Nafa performed admirably. He was courteous, helpful, and completed a fantastic job. We're delighted and will return soon for additional orders.</p><i class="fa-solid fa-quote-left"></i></div></div>
+                <div class="item"><div class="profileSection"><img src="../assets/images/review_default_pic.png" alt="Client profile"><span>colemanuk</span><p>I'm new to WordPress, so I had many questions. Abdul Nafa made sure everything I wanted done to the site was taken care of.</p><i class="fa-solid fa-quote-left"></i></div></div>
+            </div>
+        </div>
+    </form>
+
+        {% include footer.html %}
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script><script src="../assets/js/owl.carousel.min.js"></script><script src="https://smtpjs.com/v3/smtp.js"></script><script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script><script src="../assets/js/file.js"></script>
+</body>
+
+</html>
+
+
+
