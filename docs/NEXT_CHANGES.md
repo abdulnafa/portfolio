@@ -11,17 +11,23 @@ Use this file to record planned changes before editing the site.
 
 ## Planned Changes
 
-- No pending changes recorded yet.
+- See the active task board in [TASKS.md](TASKS.md).
+
+## Resolved (2026-07-02 modernization pass)
+
+- Added `_config.yml` so Jekyll includes and front matter render on GitHub Pages.
+- Removed SMTPJS + its exposed secure token; contact form now uses a `mailto:` link.
+- Added SEO meta (description, Open Graph, Twitter) and an SVG favicon to every page.
+- Fixed text-encoding artifact in the Italian testimonial ("qualità").
+- Added `aria-label`s to icon-only social links and contact inputs; added `rel="noopener"`.
+- Rewrote the BOM-corrupted `README.md`.
 
 ## Known Follow-Up Items
 
-- Review all pages in a browser after the folder restructure.
-- Header and footer are now shared through `_includes/header.html` and `_includes/footer.html`.
-- Consider replacing the placeholder Font Awesome kit URL with a real kit or remove it because Font Awesome is already loaded through CDN CSS.
-- Review SMTPJS usage because the secure token and sender address are currently present in frontend code.
-- Review text encoding issues in some portfolio/testimonial copy where special characters appear incorrectly.
-- Consider adding alt text for images and stronger accessible names for icon-only controls.
+- Verify all pages on the published GitHub Pages URL (includes render only when built by Jekyll).
+- Populate the empty `assets/css/file460px.css` breakpoint file (see T-007).
+- Confirm every portfolio card has an optimized image (see T-006).
 
 ## Verification Notes
 
-- Not yet run in browser after docs creation.
+- Static edits complete; pending live verification on GitHub Pages after deploy.

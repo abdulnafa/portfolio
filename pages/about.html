@@ -1,6 +1,7 @@
 ---
 title: Abdul Nafa | About
 active: about
+description: About Abdul Nafa — frontend, WordPress, PHP, and Laravel developer building professional, responsive, business-focused websites.
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +11,19 @@ active: about
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="Abdul Nafa">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Abdul Nafa">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ '/assets/images/manBlack.jpg' | absolute_url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
     <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
@@ -52,7 +66,7 @@ active: about
     </div>
 
         {% include footer.html %}
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script><script src="../assets/js/owl.carousel.min.js"></script><script src="https://smtpjs.com/v3/smtp.js"></script><script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script><script src="../assets/js/file.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script><script src="../assets/js/owl.carousel.min.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script><script src="../assets/js/file.js"></script>
 </body>
 
 </html>

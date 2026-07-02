@@ -1,0 +1,27 @@
+# Jekyll / GitHub Pages configuration
+# Served from https://abdulnafa.github.io/portfolio/
+
+title: Abdul Nafa | Portfolio
+description: >-
+  Portfolio of Abdul Nafa — web designer and developer specializing in WordPress,
+  Laravel, PHP, and responsive frontend development.
+author: Abdul Nafa
+
+# Project site is served under /portfolio, so nav links built with `relative_url`
+# resolve correctly. Change both if you move to a custom domain or user page.
+url: "https://abdulnafa.github.io"
+baseurl: "/portfolio"
+
+# Build settings
+markdown: kramdown
+encoding: utf-8
+
+# Keep these out of the built site
+exclude:
+  - CLAUDE.md
+  - CODEX.md
+  - README.md
+  - docs
+  - skills-lock.json
+  - Gemfile
+  - Gemfile.lock

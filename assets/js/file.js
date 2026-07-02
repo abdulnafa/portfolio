@@ -74,28 +74,24 @@ $(document).ready(function () {
         clearTimeout(myTimeout);
       }
     } else {
-      Email.send({
-        SecureToken: "3d85d2b2-c7c4-4b28-9f28-81f5755d91c0",
-        To: 'developerabdulnafa@gmail.com',
-        From: 'abdulnafa1122@gmail.com',
-        Subject: "Portfolio Mails",
-        Body: `Name: ${name} <br/> Number: ${number} <br/> Email: ${email} <br/> Subject: ${subject} `,
-      }).then(
-        myfunction()
+      // Open the visitor's email client with the message pre-filled.
+      // No server or secret token — safe for static GitHub Pages hosting.
+      var body =
+        "Name: " + name + "\n" +
+        "Phone: " + number + "\n" +
+        "Email: " + email + "\n\n" +
+        subject;
+      var mailto = "mailto:developerabdulnafa@gmail.com" +
+        "?subject=" + encodeURIComponent("Portfolio Inquiry" + (name ? " from " + name : "")) +
+        "&body=" + encodeURIComponent(body);
 
+      window.location.href = mailto;
 
-      );
-
-      function myfunction() {
-        $("#successform").html("Form Successfully Submited");
-        swal("Form Successfully Submited!", "I'll be contact soon!", "success");
-        setTimeout(myGreeting2, 7000);
-
-        function myGreeting2() {
-          $("#successform").html(" ");
-        }
-        $('#contactus').trigger("reset");
-      }
+      $("#successform").html("Opening your email app…");
+      setTimeout(function () {
+        $("#successform").html(" ");
+      }, 7000);
+      $('#contactus').trigger("reset");
     }
 
 

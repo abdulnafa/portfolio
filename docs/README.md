@@ -4,7 +4,7 @@ This folder is the working home for future project notes, change plans, and impl
 
 ## Current Project
 
-This is a static multi-page personal portfolio site for Abdul Nafa. The site is built with plain HTML, CSS, JavaScript, jQuery, Owl Carousel, Typed.js, Font Awesome, SweetAlert, and SMTPJS.
+This is a static multi-page personal portfolio site for Abdul Nafa. The site is built with plain HTML, CSS, JavaScript, jQuery, Owl Carousel, Typed.js, and Font Awesome. The contact form opens the visitor's email client via a `mailto:` link (no server or secret token).
 
 ## Main Files
 
@@ -40,8 +40,6 @@ The page loads these dependencies from CDNs:
 - Google Fonts: Hubballi and Poppins
 - Font Awesome
 - jQuery 3.6.1
-- SMTPJS
-- SweetAlert
 - Typed.js
 
 The project also keeps local Owl Carousel assets:
