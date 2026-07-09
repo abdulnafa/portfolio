@@ -952,4 +952,85 @@
         line-height: 20px;
         margin-top: 14px;
     }
+
+    /* Mobile header, menu, and hero button fixes */
+    body.menuOpen{
+        overflow: hidden;
+    }
+
+    .header{
+        z-index: 12000;
+    }
+
+    .header .openmenu{
+        position: relative;
+        z-index: 12001;
+        cursor: pointer;
+        padding: 8px;
+        margin-right: -8px;
+    }
+
+    .mobilemenusmall{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        background: rgba(0, 0, 0, .96);
+        z-index: 20000;
+        transition: opacity .25s ease, visibility .25s ease;
+    }
+
+    .mobilemenusmall.isOpen{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .mobilemenusmall ul{
+        top: auto;
+        gap: 8px;
+    }
+
+    .mobilemenusmall ul li{
+        margin-bottom: 12px;
+    }
+
+    .mobilemenusmall ul li a{
+        display: block;
+        font-size: 24px;
+        line-height: 34px;
+        padding: 10px 24px;
+    }
+
+    .mobilemenusmall .cross{
+        cursor: pointer;
+        z-index: 20001;
+        top: 24px;
+        right: 24px;
+        padding: 8px;
+    }
+
+    .heroSection .textSection .twoButtons{
+        align-items: stretch;
+    }
+
+    .heroSection .textSection button.white{
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, .72);
+    }
+
+    .heroSection .textSection button.white a{
+        color: white;
+    }
+
+    .heroSection .textSection button.black{
+        background: black;
+        border: 1px solid black;
+    }
+
+    .heroSection .textSection button.black a{
+        color: white;
+    }
     

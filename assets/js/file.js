@@ -142,19 +142,27 @@ $(document).ready(function () {
     $(".noResults").toggle(visibleCount === 0);
   });
 
-  $(".openmenu").on("click", function () {
-    $(".mobilemenusmall").slideDown();
-    $("body").css("overflow-y", "hidden");
+  $(".openmenu").on("click", function (e) {
+    e.preventDefault();
+    $(".mobilemenusmall").addClass("isOpen");
+    $("body").addClass("menuOpen");
   });
 
   $(".mobilemenusmall ul li").on("click", function () {
-    $(".mobilemenusmall").hide();
-    $("body").css("overflow-y", "scroll");
+    $(".mobilemenusmall").removeClass("isOpen");
+    $("body").removeClass("menuOpen");
   });
 
   $(".cross").on("click", function () {
-    $(".mobilemenusmall").slideUp();
-    $("body").css("overflow-y", "scroll");
+    $(".mobilemenusmall").removeClass("isOpen");
+    $("body").removeClass("menuOpen");
+  });
+
+  $(document).on("keydown", function (e) {
+    if (e.key === "Escape") {
+      $(".mobilemenusmall").removeClass("isOpen");
+      $("body").removeClass("menuOpen");
+    }
   });
 
   if ($(".animatedtext").length && typeof Typed !== "undefined") {
