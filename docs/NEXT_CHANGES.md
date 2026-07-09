@@ -15,7 +15,7 @@ Use this file to record planned changes before editing the site.
 
 ## Resolved (2026-07-02 modernization pass)
 
-- Added `_config.yml` so Jekyll includes and front matter render on GitHub Pages.
+- Added `_config.yml` so the shared footer include and front matter render on GitHub Pages.
 - Removed SMTPJS + its exposed secure token; contact form now uses a `mailto:` link.
 - Added SEO meta (description, Open Graph, Twitter) and an SVG favicon to every page.
 - Fixed text-encoding artifact in the Italian testimonial ("qualità").

@@ -147,6 +147,24 @@ $(document).ready(function () {
   });
   // Load More Project code End -------------------------
 
+  $(".filterBtn").on("click", function () {
+    var filter = $(this).data("filter");
+    var visibleCount = 0;
+
+    $(".filterBtn").removeClass("active");
+    $(this).addClass("active");
+
+    $(".projectCard").each(function () {
+      var shouldShow = filter === "all" || $(this).data("category") === filter;
+      $(this).toggle(shouldShow);
+      if (shouldShow) {
+        visibleCount++;
+      }
+    });
+
+    $(".noResults").toggle(visibleCount === 0);
+  });
+
   $(".openmenu").on("click", function () {
     $(".mobilemenusmall").slideDown();
     $("body").css("overflow-y", "hidden");

@@ -14,13 +14,13 @@ description: Web development services by Abdul Nafa — frontend, WordPress, Lar
     <meta name="description" content="{{ page.description }}">
     <meta name="author" content="Abdul Nafa">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
-    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/Website%20Images/favicon.svg' | relative_url }}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Abdul Nafa">
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:description" content="{{ page.description }}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:image" content="{{ '/assets/images/manBlack.jpg' | absolute_url }}">
+    <meta property="og:image" content="{{ '/assets/images/Website%20Images/manBlack.jpg' | absolute_url }}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ page.title }}">
     <meta name="twitter:description" content="{{ page.description }}">
@@ -35,7 +35,28 @@ description: Web development services by Abdul Nafa — frontend, WordPress, Lar
 </head>
 
 <body>
-    {% include header.html %}
+    <div class="mobilemenusmall">
+        <div class="cross"><i class="fa-solid fa-circle-xmark"></i></div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">What we do</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+    
+    <div class="header">
+        <h2><span></span>Abdul Nafa</h2>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="services.html">What we do</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <i class="fa-solid fa-align-justify openmenu"></i>
+    </div>
 
     <div class="subHero"><h1>What We Do</h1><p>Frontend, WordPress, Laravel, PHP, and custom website development services.</p></div>
 
@@ -56,6 +77,8 @@ description: Web development services by Abdul Nafa — frontend, WordPress, Lar
 </body>
 
 </html>
+
+
 
 
 

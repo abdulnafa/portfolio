@@ -29,7 +29,6 @@ This repository is a static multi-page portfolio website. It does not use a pack
 |   |-- portfolio.html
 |   `-- contact.html
 |-- _includes/
-|   |-- header.html
 |   `-- footer.html
 `-- docs/
     |-- README.md
@@ -41,7 +40,7 @@ This repository is a static multi-page portfolio website. It does not use a pack
 - Keep the site static unless the user asks for a framework or build setup.
 - Preserve the existing file organization for small changes.
 - Keep main navigation links pointed to page files, not old single-page anchor links.
-- Shared header markup lives in `_includes/header.html`.
+- Header markup is duplicated per page so each page can be edited independently.
 - Shared footer markup lives in `_includes/footer.html`.
 - Pages use Jekyll front matter so GitHub Pages can process `{% include ... %}` tags.
 - Put base styles in `assets/css/file.css`.
@@ -82,7 +81,7 @@ Runtime dependencies are loaded directly in `index.html`:
 ## Manual Verification Checklist
 
 - Open `index.html`, `pages/about.html`, `pages/services.html`, `pages/portfolio.html`, and `pages/contact.html` in a browser.
-- For final shared-header/shared-footer output, verify on the GitHub Pages URL or with a local Jekyll build.
+- For final shared-footer output, verify on the GitHub Pages URL or with a local Jekyll build.
 - Check desktop navigation links open the correct pages.
 - Check mobile menu opens, closes, and restores page scrolling.
 - Check services and testimonials carousels.

@@ -13,7 +13,7 @@ This is a static multi-page personal portfolio site for Abdul Nafa. The site is 
 - `pages/services.html` contains the services page.
 - `pages/portfolio.html` contains the portfolio/project page.
 - `pages/contact.html` contains the contact form and testimonials page.
-- `_includes/header.html` contains the shared mobile and desktop header navigation.
+- Header markup is written separately inside each page.
 - `_includes/footer.html` contains the shared footer, social links, and back-to-top element.
 - `assets/css/file.css` contains the base desktop styling.
 - `assets/css/file912px.css`, `assets/css/file768px.css`, `assets/css/file600px.css`, and `assets/css/file460px.css` contain responsive overrides.
@@ -49,4 +49,4 @@ The project also keeps local Owl Carousel assets:
 
 ## How To Run Locally
 
-The site is intended to run through GitHub Pages, which processes the Jekyll includes used for the shared header and footer. For final verification, use the published GitHub Pages URL or a local Jekyll build.
+The site is intended to run through GitHub Pages, which processes the Jekyll include used for the shared footer. For final verification, use the published GitHub Pages URL or a local Jekyll build.

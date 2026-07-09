@@ -112,7 +112,7 @@ a{
 /* Hero Section  */
 
 .heroSection{
-    background-image: url("../images/web-agency.jpg");
+    background-image: url("../images/Website%20Images/web-agency.jpg");
     background-repeat: no-repeat;
     position: relative;
     background-size: cover;
@@ -219,7 +219,7 @@ a{
 /* Inner page hero */
 
 .subHero{
-    background-image: linear-gradient(rgba(0, 0, 0, .72), rgba(0, 0, 0, .72)), url("../images/web-agency.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .72), rgba(0, 0, 0, .72)), url("../images/Website%20Images/web-agency.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -274,7 +274,7 @@ a{
 }
 .aboutImage{
     min-height: 360px;
-    background-image: url("../images/menhand.jpg");
+    background-image: url("../images/Website%20Images/menhand.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -456,17 +456,17 @@ a{
 }
 
 .projectParts .spyapp{
-    background-image: url(../images/part1.jpg);
+    background-image: url(../images/spyapp.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .projectParts .nordjouren{
-    background-image: url(../images/part2.jpg);
+    background-image: url(../images/nordjouren.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .projectParts .laaldeen{
-    background-image: url(../images/part3.jpg);
+    background-image: url(../images/Project%20Images/amarisayulita.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -474,12 +474,12 @@ a{
 
 
 .projectParts .hivelocal{
-    background-image: url(../images/part5.jpg);
+    background-image: url(../images/hivelocal.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .projectParts .binazamservices{
-    background-image: url(../images/binazam.png);
+    background-image: url(../images/Project%20Images/binazamservices.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -508,7 +508,7 @@ a{
 }
 
 .projectParts .amari{
-    background-image: url(../images/amri.png);
+    background-image: url(../images/Project%20Images/amarisayulita.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -911,8 +911,159 @@ color: white;
     color: #000;
 }
 
+/* Portfolio cards */
+
+.portfolioSection {
+    width: 80%;
+    margin: auto;
+    padding: 70px 0;
+}
+
+.portfolioSection > h1 {
+    text-transform: capitalize;
+}
+
+.portfolioSection > hr {
+    width: 70px;
+    height: 5px;
+    background: black;
+    border: none;
+    margin-top: 5px;
+}
+
+.projectFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 32px 0;
+}
+
+.filterBtn {
+    border: 1px solid #d9d9d9;
+    background: white;
+    color: #222;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.filterBtn.active,
+.filterBtn:hover {
+    background: black;
+    color: white;
+    border-color: black;
+}
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.projectCard {
+    border: 1px solid rgba(0, 0, 0, .08);
+    background: white;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .08);
+    overflow: hidden;
+}
+
+.projectCard a {
+    display: block;
+    height: 100%;
+}
+
+.cardImage {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background: #111;
+    overflow: hidden;
+}
+
+.cardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.imgPlaceholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+    color: white;
+    background: #202020;
+    font-weight: 600;
+}
+
+.cardImage img + .cardTag,
+.cardTag {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    background: black;
+    color: white;
+    padding: 6px 10px;
+    font-size: 11px;
+}
+
+.cardBody {
+    padding: 18px;
+}
+
+.cardBody h3 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+
+.cardLink {
+    color: #111;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.cardLink i {
+    margin-left: 6px;
+}
+
+.projectCard:hover img {
+    transform: scale(1.04);
+    transition: transform .35s ease;
+}
+
+.noResults {
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 912px) {
+    .portfolioSection {
+        width: 88%;
+    }
+
+    .projectGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .portfolioSection {
+        width: 100%;
+        padding: 60px 36px;
+    }
+
+    .projectGrid {
+        grid-template-columns: 100%;
+    }
+}
+
 
 /* ----------------------------------------Responsive Mobile-----------------------------------------  */
+
 
 
 
