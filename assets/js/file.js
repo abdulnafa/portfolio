@@ -7,7 +7,15 @@ $(document).ready(function () {
     }
   });
   $(".smallarrowupicon").on("click", function () {
-    $(window).scrollTop(0);
+    $("html, body").animate({ scrollTop: 0 }, 500);
+  });
+
+  $("a[href^='#']").on("click", function (e) {
+    var target = $($(this).attr("href"));
+    if (target.length) {
+      e.preventDefault();
+      $("html, body").animate({ scrollTop: target.offset().top - 70 }, 500);
+    }
   });
 
 

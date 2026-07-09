@@ -62,7 +62,7 @@
     /* Hero Section  */
     
     .heroSection{
-        /* background-image: url("../images/Website%20Images/web-agency.jpg"); */
+        /* background-image: url("../images/Website%20Images/web-agency.webp"); */
         background-repeat: no-repeat;
         position: relative;
         background-size: cover;
@@ -685,4 +685,5 @@
         align-items: center;
     }
     
+
 
