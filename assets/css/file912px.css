@@ -24,3 +24,46 @@
         padding: 50px 20px;
         color: white;
     }
+
+    .aboutPage,
+    .service,
+    .projects,
+    .choose,
+    .formSection,
+    .portfolioSection,
+    .innerBigFooter,
+    .innerFooter{
+        width: calc(100% - var(--site-gutter-total));
+        max-width: var(--site-max-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .innerBigFooter,
+    .innerFooter{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .addressGrid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header{
+        padding-left: max(24px, calc((100% - var(--site-max-width)) / 2));
+        padding-right: max(24px, calc((100% - var(--site-max-width)) / 2));
+    }
+
+    .heroSection .filter{
+        margin-left: max(24px, calc((100% - var(--site-max-width)) / 2));
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .heroSection .textSection{
+        width: 430px;
+        max-width: calc(100% - 180px);
+        margin-left: 58px;
+    }

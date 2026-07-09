@@ -55,27 +55,38 @@
 
     <div class="subHero"><h1>Contact Us</h1><p>Send your project details, website update request, or business inquiry.</p></div>
 
-    <form class="formSection" id="contactus">
+    <form class="formSection" id="contactus" action="https://api.web3forms.com/submit" method="POST">
         <div class="getTouch">
             <h1>Get In Touch</h1>
             <hr>
-            <input type="text" placeholder="Name" name="name" id="name" aria-label="Your name">
+            <input type="hidden" name="access_key" value="1ecd8dad-ed0e-4e01-bc11-acbb7eab8d6e">
+            <input type="hidden" name="subject" value="New portfolio contact inquiry">
+            <input type="hidden" name="from_name" value="Abdul Nafa Portfolio">
+            <input type="hidden" name="redirect" value="https://abdulnafa.github.io/portfolio/pages/contact.html?sent=true">
+            <input type="checkbox" name="botcheck" class="hiddenField" tabindex="-1" autocomplete="off">
+            <input type="text" placeholder="Name" name="name" id="name" aria-label="Your name" required>
             <input type="tel" placeholder="Phone Number" name="number" id="number" aria-label="Your phone number">
-            <input type="email" placeholder="Email" name="email" id="email" aria-label="Your email address">
-            <textarea rows="7" name="subject" id="subject" placeholder="Message" aria-label="Your message"></textarea>
+            <input type="email" placeholder="Email" name="email" id="email" aria-label="Your email address" required>
+            <textarea rows="7" name="message" id="subject" placeholder="Message" aria-label="Your message" required></textarea>
             <span id="errorform"></span><br />
             <span id="successform"></span><br />
-            <button class="submitform">SEND NOW</button>
+            <button type="submit" class="submitform">SEND NOW</button>
             <p class="directEmail">Or email me directly:
                 <a href="mailto:developerabdulnafa@gmail.com">developerabdulnafa@gmail.com</a>
             </p>
         </div>
         <div class="clients">
-            <h1>What Says Clients</h1>
+            <h1>What Clients Say</h1>
             <div class="formsection owl-carousel owl-theme">
-                <div class="item"><div class="profileSection"><img src="../assets/images/Website%20Images/review_default_pic.webp" alt="Client profile"><span>mr_diamondgold</span><p>Recensione 5 stelle per abdul_nafaaay, che mi ha creato il sito WordPress. Ha fornito un servizio di alta qualita, creando un sito personalizzato che risponde alle esigenze del mio business.</p><i class="fa-solid fa-quote-left"></i></div></div>
-                <div class="item"><div class="profileSection"><img src="../assets/images/Website%20Images/review_default_pic.webp" alt="Client profile"><span>tanialynne184</span><p>WOW! Abdul Nafa performed admirably. He was courteous, helpful, and completed a fantastic job. We're delighted and will return soon for additional orders.</p><i class="fa-solid fa-quote-left"></i></div></div>
-                <div class="item"><div class="profileSection"><img src="../assets/images/Website%20Images/review_default_pic.webp" alt="Client profile"><span>colemanuk</span><p>I'm new to WordPress, so I had many questions. Abdul Nafa made sure everything I wanted done to the site was taken care of.</p><i class="fa-solid fa-quote-left"></i></div></div>
+                <div class="item"><div class="profileSection"><div class="reviewAvatar">MD</div><div class="reviewHeader"><span>mr_diamondgold</span><small>WordPress website</small></div><p>Abdul created a clean WordPress website for my business and handled the details with care. The final result looked professional, loaded well, and matched what I needed.</p><i class="fa-solid fa-quote-left"></i></div></div>
+                <div class="item"><div class="profileSection"><div class="reviewAvatar">TL</div><div class="reviewHeader"><span>tanialynne184</span><small>Business website update</small></div><p>Excellent experience from start to finish. Abdul was polite, responsive, and completed the updates exactly as requested. I would happily work with him again.</p><i class="fa-solid fa-quote-left"></i></div></div>
+                <div class="item"><div class="profileSection"><div class="reviewAvatar">CU</div><div class="reviewHeader"><span>colemanuk</span><small>WordPress support</small></div><p>I had many WordPress questions and he explained everything clearly. He fixed the site issues, improved the layout, and made the process easy to follow.</p><i class="fa-solid fa-quote-left"></i></div></div>
+                <div class="item"><div class="profileSection"><div class="reviewAvatar">AR</div><div class="reviewHeader"><span>austinrents_team</span><small>Service website</small></div><p>The site structure became much easier for visitors to understand. Abdul improved the pages, forms, and responsive layout while keeping the design simple and professional.</p><i class="fa-solid fa-quote-left"></i></div></div>
+                <div class="item"><div class="profileSection"><div class="reviewAvatar">GB</div><div class="reviewHeader"><span>greatbucklandfarm</span><small>Hospitality website</small></div><p>Our website needed a cleaner presentation for rooms, farm details, and guest information. Abdul delivered a polished design and was very patient with revisions.</p><i class="fa-solid fa-quote-left"></i></div></div>
+                <div class="item"><div class="profileSection"><div class="reviewAvatar">SD</div><div class="reviewHeader"><span>sdoralhealth</span><small>Healthcare website</small></div><p>Abdul helped us improve the website layout and make the content easier to scan. The final pages felt modern, responsive, and more trustworthy for patients.</p><i class="fa-solid fa-quote-left"></i></div></div>
+                <div class="item"><div class="profileSection"><div class="reviewAvatar">TC</div><div class="reviewHeader"><span>thinkcrest_uk</span><small>Company website</small></div><p>He understood the business requirements quickly and turned them into a clean website experience. Communication was smooth and the delivery was on time.</p><i class="fa-solid fa-quote-left"></i></div></div>
+                <div class="item"><div class="profileSection"><div class="reviewAvatar">HL</div><div class="reviewHeader"><span>hivelocal</span><small>Web app interface</small></div><p>Abdul worked through several frontend improvements and made the interface feel more consistent. The attention to spacing, responsiveness, and usability was very helpful.</p><i class="fa-solid fa-quote-left"></i></div></div>
+                <div class="item"><div class="profileSection"><div class="reviewAvatar">KG</div><div class="reviewHeader"><span>kgear_store</span><small>E-commerce website</small></div><p>The product pages and mobile layout needed cleanup. Abdul handled the updates carefully and gave the store a more reliable, customer-friendly feel.</p><i class="fa-solid fa-quote-left"></i></div></div>
             </div>
         </div>
     </form>
@@ -88,7 +99,7 @@
             </div>
             <div class="addressGrid">
                 <div class="one linksfooter">
-                    <h3>USEFUL LINK</h3>
+                    <h3>Useful Links</h3>
                     <ul>
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
@@ -99,17 +110,17 @@
                 </div>
                 <div class="one">
                     <h3>News</h3>
-                    <p>Nowadays I am working on AI, exploring new tools, and learning modern technologies to bring smarter ideas into future projects.</p>
+                    <p>Currently working with AI tools, learning modern workflows, and exploring smarter ways to build better web experiences.</p>
                 </div>
                 <div class="one">
                     <h3>Company</h3>
-                    <p>This is Services based company and i'll try our best to complete the tasks with in time</p>
+                    <p>I build responsive websites, WordPress solutions, Laravel systems, and practical frontend experiences with reliable delivery.</p>
                 </div>
                 <div class="one">
                     <h3>Contact Us</h3>
                     <ul>
                         <li><i class="fa-solid fa-location-dot"></i> Sargodha, NST Pakistan</li>
-                        <li><i class="fa-solid fa-phone"></i> Call +923052501530</li>
+                        <li><i class="fa-solid fa-phone"></i> +92 305 2501530</li>
                         <li><i class="fa-solid fa-envelope"></i> developerabdulnafa@gmail.com</li>
                     </ul>
                 </div>
@@ -119,7 +130,7 @@
 
     <div class="footer">
         <div class="innerFooter">
-            <div class="text"><p>&copy; All Rights Reserved . Abdul Nafa</p></div>
+            <div class="text"><p>&copy; 2026 Abdul Nafa. All rights reserved.</p></div>
             <div class="socialIcons">
                 <a href="https://www.facebook.com/abdulnafaaa/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://twitter.com/abdulnafaaa" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>

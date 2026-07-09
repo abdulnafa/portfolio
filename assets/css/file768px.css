@@ -31,3 +31,28 @@
     .servicesPage .serviceGrid {
         grid-template-columns: 50% 50%;
     }
+
+    .aboutPage,
+    .service,
+    .projects,
+    .choose,
+    .formSection,
+    .portfolioSection,
+    .innerBigFooter,
+    .innerFooter{
+        width: calc(100% - var(--site-gutter-total));
+        max-width: var(--site-max-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .addressGrid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header{
+        padding-left: max(24px, calc((100% - var(--site-max-width)) / 2));
+        padding-right: max(24px, calc((100% - var(--site-max-width)) / 2));
+    }

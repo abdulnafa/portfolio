@@ -679,6 +679,15 @@ color: white;
 .getTouch input{
     padding: 8px 14px;
 }
+.getTouch textarea{
+    min-height: 210px;
+    padding: 14px 18px;
+    line-height: 26px;
+    resize: vertical;
+}
+.getTouch .hiddenField{
+    display: none;
+}
 .getTouch #errorform{
     color: red;
 }
@@ -691,6 +700,11 @@ color: white;
     color: white;
     padding: 18px 30px;
     border: none;
+    cursor: pointer;
+}
+.getTouch button:disabled{
+    cursor: wait;
+    opacity: .72;
 }
 
 .clients{
@@ -698,39 +712,69 @@ color: white;
     padding: 20px;
 }
 .clients .owl-stage-outer{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
     margin-top: 30px;
 }
 .clients .owl-nav{
     margin-top: 60px;
 }
 .clients  .profileSection{
-    
-    margin-top: 60px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, .08);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, .12);
+    border-radius: 10px;
+    margin-top: 30px;
     position: relative;
-    padding: 10px 15px;
+    padding: 34px 34px 32px;
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    column-gap: 18px;
+    align-items: center;
 }
 .clients .profileSection img{
-    width: 81px;
-    position: absolute;
-    top: -21px;
+    display: none;
 }
 .clients .profileSection span{
-    margin-left:100px;
+    margin-left: 0;
     font-size: 20px;
     font-weight: bold;
-
+    line-height: 26px;
+    display: block;
+}
+.reviewAvatar{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background: #172629;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.reviewHeader small{
+    color: #777;
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 2px;
 }
 .clients .profileSection p{
-    margin-top: 1px;
-    padding: 20px 0;
+    grid-column: 1 / -1;
+    margin-top: 24px;
+    padding: 0;
+    color: #222;
+    font-size: 15px;
+    line-height: 27px;
 }
 .clients .profileSection i{
     position: absolute;
-    right: 55px;
-    top: 15px;
-    font-size: 22px;
+    right: 34px;
+    top: 38px;
+    font-size: 28px;
+    color: #111;
 }
 .clients .arrow_div{
     margin-top: 30px;
@@ -949,6 +993,99 @@ color: white;
     padding: 6px 9px;
 }
 
+.logoCarousel{
+    position: relative;
+    overflow: hidden;
+    margin: 55px 0 36px;
+    padding: 10px 0;
+}
+
+.logoCarousel::before,
+.logoCarousel::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 90px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logoCarousel::before{
+    left: 0;
+    background: linear-gradient(90deg, white, rgba(255, 255, 255, 0));
+}
+
+.logoCarousel::after{
+    right: 0;
+    background: linear-gradient(270deg, white, rgba(255, 255, 255, 0));
+}
+
+.logoCarouselTrack{
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: max-content;
+    animation: logoScroll 34s linear infinite;
+}
+
+.techLogo{
+    width: 240px;
+    height: 125px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-right: 28px;
+    flex: 0 0 auto;
+}
+
+.techLogo img{
+    max-width: 88%;
+    max-height: 105px;
+    object-fit: contain;
+    display: block;
+}
+
+@keyframes logoScroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .logoCarouselTrack{
+        animation: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .logoCarousel{
+        margin: 10px 0 30px;
+    }
+
+    .logoCarousel::before,
+    .logoCarousel::after{
+        width: 46px;
+    }
+
+    .techLogo{
+        width: 145px;
+        height: 86px;
+        padding: 0;
+        margin-right: 14px;
+    }
+
+    .techLogo img{
+        max-width: 90%;
+        max-height: 72px;
+    }
+}
+
 /* Portfolio cards */
 
 .portfolioSection {
@@ -996,6 +1133,14 @@ color: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+}
+
+.projects .projectGrid {
+    margin: 40px 0 32px;
+}
+
+.featuredProjects.projectGrid {
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .projectCard {
@@ -1112,8 +1257,532 @@ color: white;
         padding: 60px 36px;
     }
 
-    .projectGrid {
+    .projectGrid,
+    .featuredProjects.projectGrid {
         grid-template-columns: 100%;
+    }
+}
+
+/* Consistent section width and professional footer */
+:root{
+    --site-max-width: 1200px;
+    --site-gutter-total: 48px;
+}
+
+.aboutPage,
+.service,
+.projects,
+.choose,
+.formSection,
+.portfolioSection,
+.innerBigFooter,
+.innerFooter{
+    width: calc(100% - var(--site-gutter-total));
+    max-width: var(--site-max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutPage,
+.service,
+.projects,
+.choose,
+.formSection,
+.portfolioSection{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.subHero{
+    padding-left: max(24px, calc((100% - var(--site-max-width)) / 2));
+    padding-right: max(24px, calc((100% - var(--site-max-width)) / 2));
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: max(24px, calc((100% - var(--site-max-width)) / 2));
+    padding-right: max(24px, calc((100% - var(--site-max-width)) / 2));
+}
+
+.header h2,
+.header ul{
+    float: none;
+}
+
+.heroSection .filter{
+    width: 70px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: max(24px, calc((100% - var(--site-max-width)) / 2));
+}
+
+.heroSection .textSection{
+    width: 430px;
+    max-width: calc(100% - 180px);
+    margin-left: 58px;
+}
+
+.heroSection .textSection p{
+    width: 100%;
+    max-width: 430px;
+}
+
+.bigFooterBlack{
+    background: #202020;
+    padding: 64px 0 48px;
+}
+
+.innerBigFooter{
+    padding: 0;
+}
+
+.logoGrid{
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 620px);
+    align-items: center;
+    gap: 48px;
+    padding: 0 0 42px;
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
+.logoGrid .logo h2{
+    float: none;
+    color: white;
+    font-size: 30px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoGrid .logo span{
+    position: static;
+    display: inline-block;
+    width: 4px;
+    height: 38px;
+    border: none;
+    background: white;
+}
+
+.logoGrid .form{
+    display: flex;
+    justify-content: flex-end;
+    justify-self: end;
+    width: 100%;
+    max-width: 620px;
+}
+
+.logoGrid .form input{
+    width: auto;
+    flex: 1;
+    min-width: 0;
+    min-height: 52px;
+    padding: 0 18px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    background: white;
+    color: #222;
+    outline: none;
+}
+
+.logoGrid .form button{
+    min-height: 52px;
+    background: #0f0f0f;
+    border: 1px solid #0f0f0f;
+    color: white;
+    padding: 0 24px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background .2s ease, border-color .2s ease;
+}
+
+.logoGrid .form button:hover{
+    background: #000;
+    border-color: #333;
+}
+
+.addressGrid{
+    grid-template-columns: 1fr 1.35fr 1.35fr 1.55fr;
+    gap: 42px;
+    padding: 42px 0 0;
+    color: white;
+}
+
+.addressGrid .one h3{
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.addressGrid .one p,
+.addressGrid .one ul li{
+    color: rgba(255, 255, 255, .78);
+    font-size: 14px;
+    line-height: 28px;
+    overflow-wrap: anywhere;
+}
+
+.addressGrid .one ul li{
+    margin: 0 0 12px;
+}
+
+.addressGrid .linksfooter a{
+    color: rgba(255, 255, 255, .78);
+    transition: color .2s ease, padding-left .2s ease;
+}
+
+.addressGrid .linksfooter a:hover{
+    color: white;
+    padding-left: 4px;
+}
+
+.addressGrid .one ul li i{
+    width: 18px;
+    margin-right: 10px;
+    color: white;
+}
+
+.footer{
+    background: #141414;
+    padding: 20px 0;
+}
+
+.innerFooter{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.innerFooter .text,
+.innerFooter .socialIcons{
+    width: auto;
+}
+
+.innerFooter .text{
+    color: rgba(255, 255, 255, .82);
+}
+
+.innerFooter .socialIcons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.innerFooter .socialIcons a{
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .15);
+    transition: background .2s ease, border-color .2s ease;
+}
+
+.innerFooter .socialIcons a:hover{
+    background: white;
+    border-color: white;
+    color: #141414;
+}
+
+.innerFooter .socialIcons i{
+    margin-right: 0;
+}
+
+/* Professional Why Choose Us section */
+.fullChoose{
+    background: #090909;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.fullChoose::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(120deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, 0) 35%),
+        radial-gradient(circle at 85% 18%, rgba(255, 255, 255, .08), rgba(255, 255, 255, 0) 28%);
+    pointer-events: none;
+}
+
+.choose{
+    position: relative;
+    padding: 86px 0;
+}
+
+.choose h1{
+    text-align: left;
+    font-size: 42px;
+    line-height: 52px;
+}
+
+.choose > hr{
+    width: 96px;
+    height: 5px;
+    background: white;
+    border: none;
+    margin: 12px 0 0;
+}
+
+.chooseIntro{
+    max-width: 760px;
+    margin-top: 24px;
+    color: rgba(255, 255, 255, .74);
+    font-size: 15px;
+    line-height: 29px;
+}
+
+.chooseParts{
+    margin: 46px 0 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.chooseParts .part{
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: rgba(255, 255, 255, .045);
+    padding: 28px;
+    min-height: 275px;
+    transition: transform .25s ease, background .25s ease, border-color .25s ease;
+}
+
+.chooseParts .part:hover{
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, .075);
+    border-color: rgba(255, 255, 255, .28);
+}
+
+.chooseParts .part .imageDiv{
+    width: 52px;
+    height: 52px;
+    max-height: none;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, .22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.chooseParts .part .imageDiv i{
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+.chooseParts .part h1{
+    font-size: 42px;
+    line-height: 46px;
+    margin-bottom: 10px;
+}
+
+.chooseParts .part h2{
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+
+.chooseParts .part p{
+    color: rgba(255, 255, 255, .68);
+    margin: 0;
+    line-height: 25px;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 912px){
+    .chooseParts{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 600px){
+    .choose{
+        padding: 64px 0;
+    }
+
+    .choose h1{
+        text-align: left;
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+    .choose > hr{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .chooseParts{
+        grid-template-columns: 100%;
+        text-align: left;
+        margin-top: 34px;
+    }
+
+    .chooseParts .part{
+        min-height: auto;
+        padding: 24px;
+    }
+}
+
+/* Professional home hero */
+.heroSection{
+    height: auto;
+    min-height: 760px;
+    background-position: center top;
+}
+
+.heroSection::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, .84) 0%, rgba(0, 0, 0, .66) 36%, rgba(0, 0, 0, .35) 66%, rgba(0, 0, 0, .18) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, .18), rgba(0, 0, 0, .42));
+    z-index: 1;
+}
+
+.heroSection .filter{
+    display: none;
+}
+
+.heroSection .textSection{
+    position: relative;
+    z-index: 2;
+    float: none;
+    width: min(650px, calc(100% - var(--site-gutter-total)));
+    max-width: 650px;
+    margin-left: max(24px, calc((100% - var(--site-max-width)) / 2));
+    padding: 185px 0 82px;
+}
+
+.animatedtext{
+    min-height: 146px;
+    height: auto;
+}
+
+.heroSection .textSection h1{
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: 0;
+}
+
+.heroSection .textSection p{
+    width: 100%;
+    max-width: 620px;
+    font-size: 15px;
+    line-height: 28px;
+    color: rgba(255, 255, 255, .9);
+    margin: 22px 0 0;
+}
+
+.heroSkills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.heroSkills span{
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .26);
+    background: rgba(255, 255, 255, .08);
+    padding: 8px 12px;
+    font-size: 12px;
+}
+
+.heroSection .textSection .twoButtons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.heroSection .textSection button{
+    margin-top: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.heroSection .textSection button a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 28px;
+}
+
+.heroSection .textSection button.black{
+    background: white;
+}
+
+.heroSection .textSection button.black a{
+    color: black;
+}
+
+.heroSection .textSection button.white{
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, .72);
+}
+
+.heroSection .textSection button.white a{
+    color: white;
+}
+
+.heroSection .textSection .heroTrust{
+    font-size: 13px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, .72);
+    margin-top: 18px;
+}
+
+@media screen and (max-width: 600px){
+    .heroSection{
+        height: auto;
+        min-height: 690px;
+    }
+
+    .heroSection .textSection{
+        width: calc(100% - var(--site-gutter-total));
+        max-width: none;
+        margin-left: calc(var(--site-gutter-total) / 2);
+        padding-top: 130px;
+        padding-bottom: 58px;
+    }
+
+    .animatedtext{
+        min-height: 116px;
+    }
+
+    .heroSection .textSection h1{
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .heroSection .textSection p{
+        max-width: none;
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .heroSkills{
+        gap: 8px;
+        margin-top: 18px;
+    }
+
+    .heroSkills span{
+        font-size: 11px;
+        padding: 7px 10px;
+    }
+
+    .heroSection .textSection .twoButtons{
+        margin-top: 22px;
+    }
+
+    .heroSection .textSection button a{
+        min-height: 44px;
+        padding: 0 18px;
     }
 }
 
