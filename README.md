@@ -1,26 +1,26 @@
-# Abdul Nafa — Portfolio
+# Abdul Nafa - Portfolio
 
 A static, multi-page personal portfolio website for **Abdul Nafa**, a web designer and
-developer specializing in WordPress, Laravel, PHP, and responsive frontend development.
+developer specializing in WordPress, Laravel, PHP, AI-assisted workflows, and responsive
+frontend development.
 
 **Live site:** https://abdulnafa.github.io/portfolio/
 
 ## Tech Stack
 
-- **HTML5 / CSS3 / JavaScript (jQuery)** — no framework, no build step
-- **Jekyll includes** for the shared header and footer (rendered by GitHub Pages)
-- **Owl Carousel** — services and testimonials sliders
-- **Typed.js** — hero text animation
-- **Font Awesome** — icons
-- **Google Fonts** — Hubballi & Poppins
+- **HTML5 / CSS3 / JavaScript (jQuery)** - no framework, no build step
+- **Plain static pages** - works directly from file or GitHub Pages
+- **Owl Carousel** - services and testimonials sliders
+- **Typed.js** - hero text animation
+- **Font Awesome** - icons
+- **Google Fonts** - Hubballi & Poppins
 
 ## Structure
 
-```
+```text
 index.html          Home page
-pages/              about, services, portfolio, contact
-_includes/          Shared header & footer (Jekyll)
-_config.yml         GitHub Pages / Jekyll config
+pages/              About, services, portfolio, contact
+_config.yml         GitHub Pages metadata
 assets/
   css/              Base styles + responsive breakpoints (912/768/600/460px)
   js/               Custom behavior (file.js) + Owl Carousel
@@ -30,19 +30,13 @@ docs/               Project docs & task tracking
 
 ## Running Locally
 
-The shared header/footer use Jekyll `{% include %}` tags, so full rendering needs Jekyll:
-
-```bash
-bundle exec jekyll serve   # http://localhost:4000
-```
-
-Opening the HTML files directly in a browser works for quick edits, but the include tags
-will not be processed.
+Open `index.html` directly in a browser, or serve the folder with any simple static
+server. No build step is required.
 
 ## Deployment
 
 Hosted free on **GitHub Pages** from the `main` branch. Any push to `main` triggers an
-automatic rebuild — no CI or manual step required.
+automatic rebuild - no CI or manual step required.
 
 ## Contact
 
@@ -51,5 +45,5 @@ automatic rebuild — no CI or manual step required.
 
 ---
 
-See [CLAUDE.md](CLAUDE.md) for development guidance and [docs/TASKS.md](docs/TASKS.md) for
-the task board.
+See [CLAUDE.md](CLAUDE.md) for development guidance and [docs/TASKS.md](docs/TASKS.md)
+for the task board.

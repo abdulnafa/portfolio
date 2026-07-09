@@ -1,10 +1,13 @@
 # Project Documentation
 
-This folder is the working home for future project notes, change plans, and implementation decisions.
+This folder is the working home for future project notes, change plans, and implementation
+decisions.
 
 ## Current Project
 
-This is a static multi-page personal portfolio site for Abdul Nafa. The site is built with plain HTML, CSS, JavaScript, jQuery, Owl Carousel, Typed.js, and Font Awesome. The contact form opens the visitor's email client via a `mailto:` link (no server or secret token).
+This is a static multi-page personal portfolio site for Abdul Nafa. The site is built
+with plain HTML, CSS, JavaScript, jQuery, Owl Carousel, Typed.js, and Font Awesome. The
+contact form opens the visitor's email client via a `mailto:` link.
 
 ## Main Files
 
@@ -13,8 +16,7 @@ This is a static multi-page personal portfolio site for Abdul Nafa. The site is 
 - `pages/services.html` contains the services page.
 - `pages/portfolio.html` contains the portfolio/project page.
 - `pages/contact.html` contains the contact form and testimonials page.
-- Header markup is written separately inside each page.
-- `_includes/footer.html` contains the shared footer, social links, and back-to-top element.
+- Header and footer markup are written separately inside each page so local file preview works.
 - `assets/css/file.css` contains the base desktop styling.
 - `assets/css/file912px.css`, `assets/css/file768px.css`, `assets/css/file600px.css`, and `assets/css/file460px.css` contain responsive overrides.
 - `assets/js/file.js` contains all custom interactive behavior.
@@ -49,4 +51,5 @@ The project also keeps local Owl Carousel assets:
 
 ## How To Run Locally
 
-The site is intended to run through GitHub Pages, which processes the Jekyll include used for the shared footer. For final verification, use the published GitHub Pages URL or a local Jekyll build.
+Open `index.html` directly in a browser, or serve the folder with any simple static
+server. GitHub Pages can publish the same files without a build step.

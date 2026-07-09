@@ -2,7 +2,9 @@
 
 ## Project Summary
 
-This repository is a static multi-page portfolio website. It does not use a package manager, bundler, backend framework, or build pipeline. The pages are served directly as HTML files.
+This repository is a static multi-page portfolio website. It does not use a package
+manager, bundler, backend framework, or build pipeline. The pages are served directly as
+HTML files.
 
 ## Core Structure
 
@@ -23,15 +25,16 @@ This repository is a static multi-page portfolio website. It does not use a pack
 |   |   |-- file.js
 |   |   `-- owl.carousel.min.js
 |   `-- images/
+|       |-- Project Images/
+|       `-- Website Images/
 |-- pages/
 |   |-- about.html
 |   |-- services.html
 |   |-- portfolio.html
 |   `-- contact.html
-|-- _includes/
-|   `-- footer.html
 `-- docs/
     |-- README.md
+    |-- TASKS.md
     `-- NEXT_CHANGES.md
 ```
 
@@ -40,9 +43,7 @@ This repository is a static multi-page portfolio website. It does not use a pack
 - Keep the site static unless the user asks for a framework or build setup.
 - Preserve the existing file organization for small changes.
 - Keep main navigation links pointed to page files, not old single-page anchor links.
-- Header markup is duplicated per page so each page can be edited independently.
-- Shared footer markup lives in `_includes/footer.html`.
-- Pages use Jekyll front matter so GitHub Pages can process `{% include ... %}` tags.
+- Header and footer markup are written directly in each page so the site works from `file://`.
 - Put base styles in `assets/css/file.css`.
 - Put breakpoint-specific overrides in the matching responsive CSS file.
 - Put custom behavior in `assets/js/file.js`.
@@ -56,37 +57,34 @@ This repository is a static multi-page portfolio website. It does not use a pack
 - Back-to-top button visibility and click behavior
 - Services Owl Carousel on pages that include it
 - Testimonials Owl Carousel on pages that include it
-- Contact form validation and SMTPJS send
-- Project hover overlays
+- Contact form validation and mailto fallback
+- Project hover overlays and portfolio filters
 - Project show-more behavior
 - Mobile menu open, close, and link click behavior
 - Typed.js hero text animation
 
 ## Important Dependencies
 
-Runtime dependencies are loaded directly in `index.html`:
+Runtime dependencies are loaded directly in the HTML pages:
 
 - jQuery must load before `assets/js/owl.carousel.min.js` and `assets/js/file.js`.
 - Owl Carousel CSS must load before carousel layout is expected.
 - Typed.js must load before the `.animatedtext` initialization in `assets/js/file.js`.
-- SMTPJS and SweetAlert must load before the contact form send flow.
 
 ## Risk Notes
 
-- The contact form exposes frontend email configuration. Treat email/contact changes carefully.
+- The contact form uses the visitor's email client. Treat email/contact changes carefully.
 - The old about video section has been removed. Do not reintroduce it unless requested.
-- Some copied text appears to have encoding artifacts. Preserve intended words when cleaning copy.
-- Project cards depend on matching HTML classes and CSS background-image selectors.
+- Project cards depend on matching HTML classes, image paths, and CSS hover states.
+- WebP assets live in folders with spaces, so keep `%20` encoded paths in HTML/CSS.
 
 ## Manual Verification Checklist
 
 - Open `index.html`, `pages/about.html`, `pages/services.html`, `pages/portfolio.html`, and `pages/contact.html` in a browser.
-- For final shared-footer output, verify on the GitHub Pages URL or with a local Jekyll build.
 - Check desktop navigation links open the correct pages.
 - Check mobile menu opens, closes, and restores page scrolling.
 - Check services and testimonials carousels.
-- Check about video play overlay.
-- Check portfolio cards reveal content on hover.
-- Check `See More` reveals additional project cards.
+- Check portfolio cards reveal images clearly on hover.
+- Check portfolio filters and `See More` behavior.
 - Check contact form empty-state validation.
 - Check responsive layout around 912px, 768px, 600px, and 460px widths.
