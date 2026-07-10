@@ -1033,4 +1033,70 @@
     .heroSection .textSection button.black a{
         color: white;
     }
+
+    /* Professional About page mobile layout */
+    .aboutPage{
+        grid-template-columns: 100%;
+        gap: 34px;
+        padding-top: 54px;
+        padding-bottom: 54px;
+    }
+
+    .aboutText h1{
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .aboutSkills{
+        gap: 8px;
+        margin: 22px 0;
+    }
+
+    .aboutSkills span{
+        font-size: 11px;
+        padding: 8px 11px;
+    }
+
+    .aboutHighlights{
+        grid-template-columns: 100%;
+    }
+
+    .aboutImage{
+        min-height: auto;
+        background-image: none;
+    }
+
+    .aboutImage img{
+        width: 100%;
+        min-height: 360px;
+        max-height: 460px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    .aboutProcess{
+        width: calc(100% - var(--site-gutter-total));
+        grid-template-columns: 100%;
+        gap: 24px;
+        margin-bottom: 58px;
+    }
+
+    .processIntro h2{
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .processGrid{
+        grid-template-columns: 100%;
+    }
+
+    .processGrid div{
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .processGrid span{
+        margin-bottom: 22px;
+    }
     
