@@ -1030,14 +1030,14 @@ color: white;
 }
 
 .techLogo{
-    width: 240px;
+    width: 210px;
     height: 125px;
     background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
-    margin-right: 28px;
+    margin-right: 20px;
     flex: 0 0 auto;
 }
 
@@ -1140,7 +1140,7 @@ color: white;
 }
 
 .featuredProjects.projectGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .projectCard {
