@@ -1,0 +1,17 @@
+.git
+.git/**
+.github
+.github/**
+.agents
+.agents/**
+.codex
+.codex/**
+docs
+docs/**
+_includes
+_includes/**
+*.md
+_config.yml
+skills-lock.json
+wrangler.jsonc
+.assetsignore
