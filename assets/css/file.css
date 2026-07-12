@@ -1173,6 +1173,15 @@ color: white;
     max-height: 105px;
     object-fit: contain;
     display: block;
+    filter: grayscale(1) brightness(0);
+    opacity: .9;
+    transition: filter .25s ease, opacity .25s ease, transform .25s ease;
+}
+
+.techLogo:hover img{
+    filter: none;
+    opacity: 1;
+    transform: translateY(-3px);
 }
 
 @keyframes logoScroll{
